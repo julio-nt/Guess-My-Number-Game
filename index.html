@@ -1,0 +1,43 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Guess My Number</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>GUESS MY NUMBER</h1>
+			<hr />
+
+			<nav>
+				<button class="easy">Easy</button>
+				<button class="hard">Hard</button>
+				<button class="impossible">Impossible</button>
+				<button class="changeGame">Change game</button>
+			</nav>
+			<!--<p class="msg selection">Select the difficulty</p>-->
+		</header>
+		<div class="content">
+			<p class="difficultyDisplay">Select the difficulty</p>
+
+			<p class="message">Take a wild guess...</p>
+			<div class="number">?</div>
+			<input type="number" class="guess" />
+			<button class="btn check">CHECK</button>
+
+			<div class="scores">
+				<p class="scoreDisplay">Score: <span class="score">20</span></p>
+				<p class="highscoreDisplay">
+					Highscore: <span class="highscore">0</span>
+				</p>
+				<button class="resetHighscore">Reset<br />highscore</button>
+			</div>
+		</div>
+		<button class="btn again">Try<br />Again</button>
+
+		<script src="script.js"></script>
+	</body>
+</html>
