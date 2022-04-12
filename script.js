@@ -2,24 +2,31 @@
 
 let highscore = 0;
 let rightNumber;
-/************** Easier query selector ************/
+/************** query selector ************/
 const easy = document.querySelector('.easy');
 const hard = document.querySelector('.hard');
+const impossible = document.querySelector('.impossible');
 
+/************** difficulty selection ************/
 const changeDifficulty = function (difficulty) {
-	easy.removeEventListener('click', start);
-	hard.removeEventListener('click', start);
+	document.querySelector('.content').classList.remove('hidden');
+	document.querySelector('.again').classList.remove('hidden');
+	document.querySelector('.selection').style.visibility = 'hidden';
 	resetAll();
+
 	if (difficulty === 1) {
-		easy.addEventListener('click', start(1));
+		start(1);
 	}
 	if (difficulty === 2) {
-		hard.addEventListener('click', start(2));
+		start(2);
+	}
+	if (difficulty === 3) {
+		start(3);
 	}
 };
 
-/************************ EASY ************************/
 const start = function (lvl) {
+	/************************ EASY mode ************************/
 	if (lvl == 1) {
 		console.log('entering difficulty 1');
 		displayDifficulty('Easy (1 to 20)');
@@ -36,7 +43,7 @@ const start = function (lvl) {
 		});
 	}
 
-	/*************************** HARD ***********************/
+	/*************************** HARD mode ***********************/
 	if (lvl == 2) {
 		console.log('entering difficulty 2');
 		displayDifficulty('Hard (1 to 100)');
@@ -52,9 +59,27 @@ const start = function (lvl) {
 			document.querySelector('.number').style.backgroundColor = '#FFFFFF';
 		});
 	}
+
+	/**************** IMPOSSIBLE mode ***********************/
+	if (lvl == 3) {
+		console.log('entering difficulty 3');
+		displayDifficulty('Impossible (1 to 1000)');
+		rightNumber = Math.trunc(Math.random() * 1000 + 1);
+		console.log(rightNumber);
+
+		document.querySelector('.again').addEventListener('click', function () {
+			displayMessage('Take a wild guess');
+			displayScore('20');
+			document.querySelector('.guess').value = '';
+			rightNumber = Math.trunc(Math.random() * 1000 + 1);
+
+			document.querySelector('.number').textContent = '?';
+			document.querySelector('.number').style.backgroundColor = '#FFFFFF';
+		});
+	}
 };
 
-/**************** CHECK ******************/
+/**************** check number input ******************/
 document.querySelector('.check').addEventListener('click', function () {
 	let guess = document.querySelector('.guess').value;
 	let score = Number(document.querySelector('.score').textContent);

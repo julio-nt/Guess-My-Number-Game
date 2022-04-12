@@ -15,17 +15,19 @@
 			<nav>
 				<button class="easy" onclick="changeDifficulty(1)">Easy</button>
 				<button class="hard" onclick="changeDifficulty(2)">Hard</button>
-				<button class="impossible">Impossible</button>
-				<button class="changeGame">Change game</button>
+				<button class="impossible" onclick="changeDifficulty(3)">
+					Impossible
+				</button>
+				<!--	<button class="changeGame">Change game</button>-->
 			</nav>
-			<!--<p class="msg selection">Select the difficulty</p>-->
+			<p class="msg selection">Select the difficulty to start</p>
 		</header>
-		<div class="content">
+		<div class="content hidden">
 			<p class="difficultyDisplay">Select the difficulty</p>
 
 			<p class="message">Take a wild guess...</p>
 			<div class="number">?</div>
-			<input type="number" class="guess" />
+			<input type="number" min="0" class="guess" />
 			<button class="btn check">CHECK</button>
 
 			<div class="scores">
@@ -36,7 +38,7 @@
 				<button class="resetHighscore">Reset<br />highscore</button>
 			</div>
 		</div>
-		<button class="btn again">Try<br />Again</button>
+		<button class="btn again hidden">Try<br />Again</button>
 
 		<script src="script.js"></script>
 	</body>

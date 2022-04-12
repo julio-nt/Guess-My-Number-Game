@@ -7,17 +7,13 @@ body {
 	font-family: 'PressStart2P';
 	color: white;
 	background-color: black;
-	overflow: hidden;
-}
-
-header {
-	display: block;
 }
 
 h1 {
 	position: relative;
 	top: 5rem;
 	left: 37%;
+	width: 500px;
 }
 
 hr {
@@ -41,7 +37,7 @@ nav {
 button {
 	font-family: 'PressStart2P';
 	border: none;
-	padding: 5px;
+	padding: 10px;
 	width: 150px;
 	text-transform: uppercase;
 }
@@ -57,15 +53,17 @@ button.changeGame {
 
 .selection {
 	position: relative;
-	top: 5rem;
-	left: 41%;
+	top: 7rem;
+	left: 37%;
 	text-decoration: underline;
+	width: 500px;
 }
 
 .content {
 	display: flex;
 	flex-direction: column;
 	width: 500px;
+	height: 600px;
 	text-align: center;
 	position: relative;
 	top: 8rem;
@@ -136,7 +134,10 @@ button.changeGame {
 	border-radius: 50px;
 	padding: 15px;
 
-	position: absolute;
-	left: 20%;
-	top: 80%;
+	position: relative;
+	left: 10%;
+}
+
+.hidden {
+	display: none;
 }
