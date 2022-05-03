@@ -7,12 +7,13 @@ body {
 	font-family: 'PressStart2P';
 	color: white;
 	background-color: black;
+	overflow-x: hidden;
 }
 
 h1 {
 	position: relative;
 	top: 5rem;
-	left: 37%;
+	left: 35%;
 	width: 500px;
 }
 
@@ -24,7 +25,7 @@ hr {
 nav {
 	position: relative;
 	top: 5rem;
-	left: 36%;
+	left: 34%;
 	text-align: center;
 	width: 900px;
 
@@ -54,7 +55,7 @@ button.changeGame {
 .selection {
 	position: relative;
 	top: 7rem;
-	left: 37%;
+	left: 35%;
 	text-decoration: underline;
 	width: 500px;
 }
@@ -67,7 +68,7 @@ button.changeGame {
 	text-align: center;
 	position: relative;
 	top: 8rem;
-	left: 36%;
+	left: 32%;
 	gap: 20px;
 }
 
